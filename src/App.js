@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
+import ColorMixCharts from './components/ColorMixCharts';
+import SideNavbar from './components/SideNavbar';
+import HeroL from './components/hero/HeroL';
+import BarChart from './components/hero/BarChart';
+import HeroM from './components/hero/HeroM';
+import HeroR from './components/hero/HeroR';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex md:ml-4 flex-wrap">
+    <div className="sm:hidden hidden lg:block">
+  <SideNavbar />
+</div>
+    
+    <div className="flex flex-wrap">
+    <HeroL/>
+    <HeroM/>
+    </div>
+    <HeroR/>
+    
     </div>
   );
 }
